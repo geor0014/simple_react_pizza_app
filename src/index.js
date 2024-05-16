@@ -83,12 +83,19 @@ function Menu() {
   return (
     <main className="menu">
       <h2>Our Menu</h2>
+
       {numPizzas > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((pizza) => (
-            <Pizza pizzaObj={pizza} key={pizza.name} />
-          ))}
-        </ul>
+        <React.Fragment>
+          <p>
+            Authentic Italian pizzas made with love and the best ingredients.
+            All from our wood-fired oven.
+          </p>
+          <ul className="pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza pizzaObj={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </React.Fragment>
       ) : (
         <p>We're sorry, we're still working on our menu. Check back soon!</p>
       )}
