@@ -48,8 +48,9 @@ const pizzaData = [
 function App() {
   return (
     <div>
-      <h1>Hello world!</h1>
-      <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </div>
   );
 }
@@ -61,6 +62,30 @@ function Pizza() {
       <h2>Pizza Spinaci</h2>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </div>
+  );
+}
+
+function Header() {
+  return (
+    <h1>
+      <h1>Italian Restaurant</h1>
+    </h1>
+  );
+}
+function Menu() {
+  return (
+    <div>
+      <h2>Our Menu</h2>
+      <Pizza />
+    </div>
+  );
+}
+function Footer() {
+  return (
+    <footer>
+      <p>{new Date().toLocaleDateString()}</p>
+      <p>© 2024 Italian Restaurant</p>
+    </footer>
   );
 }
 
